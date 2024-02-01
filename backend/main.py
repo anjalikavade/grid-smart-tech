@@ -13,9 +13,9 @@ CORS(app)
 
 from twilio.rest import Client
 import random
-account_sid = 'AC3a53ca2d743cda7bfbb3f1e22fb193fb'
-auth_token = '2b8d3b29bbf21fab7c710d6fdec60bca'
-twilio_phone_number = '+19705333008'
+account_sid = '<Your account sid>'
+auth_token = '<your auth_token>'
+twilio_phone_number = '<your twilio_phone_number>'
 client = Client(account_sid, auth_token)
 otp=0
 def generate_otp():
@@ -33,7 +33,7 @@ def send_otp():
     #     message = client.messages.create(
     #         body=f'Your OTP is: {otp}',
     #         from_=twilio_phone_number,
-    #         to='+918317691879'
+    #         to='<your mobile number>'
     #     )
     #     return jsonify({'message': 'OTP sent successfully'}), 200
     # except Exception as e:
@@ -222,9 +222,9 @@ from web3.middleware import geth_poa_middleware
 
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)
-w3.eth.default_account = "0xA6E7a1705Eb108e5396811aE6b75805F978f5be0"
+w3.eth.default_account = "your defaultnode adress"
 abi = json.loads('[{"inputs":[{"internalType":"string","name":"element","type":"string"}],"name":"battery","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"battery_data","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"element","type":"string"}],"name":"genset","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"genset_data","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"element","type":"string"}],"name":"grid","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"grid_data","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"element","type":"string"}],"name":"load","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"load_data","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"element","type":"string"}],"name":"renewable","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"renewable_data","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"show_battery","outputs":[{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"show_genset","outputs":[{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"show_grid","outputs":[{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"show_load","outputs":[{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"show_renewable","outputs":[{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"}]')
-address = Web3.to_checksum_address("0xA1bE38DC933D63cbd03462AbcA7B1c69eE31ADe8")
+address = Web3.to_checksum_address("your default node address")
 contract = w3.eth.contract(address=address,abi=abi)
 
 
