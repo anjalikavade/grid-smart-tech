@@ -1,5 +1,0 @@
-account_sid = 'AC9587a9dd5aacbe608ab5350bd59b6618'
-auth_token = 'fe870ccc80486c24b7e7bbbd044cf281'
-twilio_phone_number = '+12058430628'
-w3.eth.default_account = "0xA6E7a1705Eb108e5396811aE6b75805F978f5be0"
-address = Web3.to_checksum_address("0xA1bE38DC933D63cbd03462AbcA7B1c69eE31ADe8")
